@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Home - Simple Static Website</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Simple Static Website</h1>
+      <nav class="nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h2>Welcome to Our Website</h2>
+      <p>Explore this simple, clean, and fully static website built using HTML and CSS.</p>
+      <a href="about.html" class="btn">Learn More</a>
+    </section>
+
+    <section class="features">
+      <div class="feature">
+        <h3>Fast</h3>
+        <p>Loads quickly and efficiently — no frameworks or scripts required.</p>
+      </div>
+      <div class="feature">
+        <h3>Responsive</h3>
+        <p>Adapts beautifully to mobile, tablet, and desktop screens.</p>
+      </div>
+      <div class="feature">
+        <h3>Easy to Deploy</h3>
+        <p>Perfect for hosting on GitHub Pages, Netlify, or Azure Static Web Apps.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> Simple Static Website</small>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

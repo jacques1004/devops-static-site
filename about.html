@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About - Simple Static Website</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Simple Static Website</h1>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2>About Us</h2>
+    <p>We are a small team passionate about building elegant and lightweight web projects using simple web technologies like HTML, CSS, and JavaScript.</p>
+
+    <p>Our goal is to show that even static websites can look great, perform fast, and be deployed anywhere easily.</p>
+
+    <blockquote>“Simplicity is the soul of efficiency.” — Austin Freeman</blockquote>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> Simple Static Website</small>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
