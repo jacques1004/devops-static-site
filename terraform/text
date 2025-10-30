@@ -1,0 +1,5 @@
+Apply complete! Resources: 4 added, 0 changed, 0 destroyed.
+
+acr_login_server = "devopsacr206.azurecr.io"
+aks_cluster_name = "devops-aks"
+resource_group = "devops-rg"
