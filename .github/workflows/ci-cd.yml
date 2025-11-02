@@ -6,8 +6,10 @@ on:
       - main
 
 env:
-  AZURE_CONTAINER_REGISTRY: devopsacr707
+  AZURE_CONTAINER_REGISTRY: devopsacr206
   IMAGE_NAME: devops-static-site
+  RESOURCE_GROUP: devops-rg
+  AKS_CLUSTER: devops-aks
 
 jobs:
   build-and-deploy:
@@ -35,9 +37,9 @@ jobs:
         run: docker push ${{ env.AZURE_CONTAINER_REGISTRY }}.azurecr.io/${{ env.IMAGE_NAME }}:latest
 
       - name: Get AKS credentials
-        run: az aks get-credentials --resource-group devops-rg --name devops-aks --overwrite-existing
+        run: az aks get-credentials --resource-group ${{ env.RESOURCE_GROUP }} --name ${{ env.AKS_CLUSTER }} --overwrite-existing
 
-      - name: Deploy to AKS
+      - name: Redeploy to AKS
         run: |
-          kubectl create deployment devops-static-site --image=${{ env.AZURE_CONTAINER_REGISTRY }}.azurecr.io/${{ env.IMAGE_NAME }}:latest --dry-run=client -o yaml | kubectl apply -f -
-          kubectl expose deployment devops-static-site --type=LoadBalancer --port=80 --target-port=80 --dry-run=client -o yaml | kubectl apply -f -
+          kubectl set image deployment/devops-static-site devops-static-site=${{ env.AZURE_CONTAINER_REGISTRY }}.azurecr.io/${{ env.IMAGE_NAME }}:latest --record
+          kubectl rollout status deployment/devops-static-site
