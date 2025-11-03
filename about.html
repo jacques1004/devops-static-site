@@ -3,38 +3,38 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>About - Simple Static Website</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <title>About - SoleStyle Shoe Store</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <h1>Simple Static Website</h1>
-      <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="about.html" class="active">About</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
+  <header>
+    <div class="logo">👟 SoleStyle</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#products">Shoes</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main class="container">
-    <h2>About Us</h2>
-    <p>We are a small team passionate about building elegant and lightweight web projects using simple web technologies like HTML, CSS, and JavaScript.</p>
+    <h2>About SoleStyle</h2>
+    <p>
+      SoleStyle is your go-to online destination for premium quality footwear.  
+      We combine comfort, design, and durability to give you shoes that match your lifestyle.
+    </p>
+    <p>
+      Founded in 2022, our mission is simple:  
+      <strong>“To make every step you take stylish and comfortable.”</strong>
+    </p>
 
-    <p>Our goal is to show that even static websites can look great, perform fast, and be deployed anywhere easily.</p>
-
-    <blockquote>“Simplicity is the soul of efficiency.” — Austin Freeman</blockquote>
+    <blockquote>“Good shoes take you good places.” — Seo Min Hyun</blockquote>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <small>© <span id="year"></span> Simple Static Website</small>
-    </div>
+  <footer>
+    <p>© 2025 SoleStyle — Designed for every step.</p>
   </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
